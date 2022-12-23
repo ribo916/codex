@@ -5,7 +5,10 @@ import { Configuration, OpenAIApi } from 'openai'
 
 dotenv.config()
  
-console.log("Key = " + process.env.OPENAI_API_KEY);
+if (process.env.OPENAI_API_KEY) {
+  console.log("Found a secret key of length = " + process.env.OPENAI_API_KEY.length);
+}
+// console.log("Key = " + process.env.OPENAI_API_KEY);
 const configuration = new Configuration({
   apiKey: process.env.OPENAI_API_KEY,
 });
