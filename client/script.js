@@ -86,7 +86,10 @@ const handleSubmit = async (e) => {
     // messageDiv.innerHTML = "..."
     loader(messageDiv)
 
-    const response = await fetch('http://localhost:5000/', {
+    // our published server = https://codex-uvo5.onrender.com/
+    // our local server = http://localhost:5000/
+
+    const response = await fetch('https://codex-uvo5.onrender.com/', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
